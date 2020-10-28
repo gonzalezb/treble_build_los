@@ -20,6 +20,10 @@ Clone the modified treble patches and this repo:
     git clone https://github.com/AndyCGYan/treble_patches -b lineage-17.1
     git clone https://github.com/gonzalezb/treble_build_los -b lineage-17.1
 
+Run the folowing command to download OpenGapps manifest:
+
+    ./gapps.sh
+
 Finally, start the build script:
 
     bash treble_build_los/buildbot_treble.sh
