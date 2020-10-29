@@ -1,6 +1,6 @@
 #!/bin/bash
 echo ""
-echo "LineageOS 17.x Treble Buildbot"
+echo "LineageOS 18.x Treble Buildbot"
 echo "ATTENTION: this script syncs repo on each run"
 echo "Executing in 5 seconds - CTRL-C to exit"
 echo ""
@@ -106,7 +106,7 @@ buildVariant() {
 	make installclean
 	make -j$(nproc --all) systemimage
 	make vndk-test-sepolicy
-	mv $OUT/system.img ~/build-output/lineage-17.1-$BUILD_DATE-UNOFFICIAL-${1}.img
+	mv $OUT/system.img ~/build-output/lineage-18.0-$BUILD_DATE-UNOFFICIAL-${1}.img
 }
 
 buildVariant treble_arm_agN arm-aonly-gapps-nosu
