@@ -30,6 +30,14 @@ Run the folowing command to download OpenGapps manifest:
 
     . treble_build_los/gapps.sh
 
+Run this command again:
+
+    repo sync
+
+Run this command to download OpenGapps files:
+
+    repo forall -c git lfs pull
+
 Finally, start the build script:
 
     bash treble_build_los/buildbot_treble.sh
