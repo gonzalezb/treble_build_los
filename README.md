@@ -24,7 +24,7 @@ Clone the modified treble patches and this repo:
 
 Run the folowing command to download OpenGapps manifest:
 
-    ./gapps.sh
+    . treble_build_los/gapps.sh
 
 Finally, start the build script:
 
