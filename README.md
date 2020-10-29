@@ -20,6 +20,10 @@ Clone the modified treble patches and this repo:
     git clone https://github.com/AndyCGYan/treble_patches -b lineage-17.1
     git clone https://github.com/gonzalezb/treble_build_los -b lineage-17.1
 
+Must run this command to sync repo before running gapps.sh:
+
+    repo sync
+
 (This command is optional run if you want gapps included! If you do not run this script it will default to no gapps)
 
 Run the folowing command to download OpenGapps manifest:
