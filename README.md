@@ -9,16 +9,16 @@ First, open a new Terminal window, which defaults to your home directory.  Clone
 
 Create a new working directory for your LineageOS build and navigate to it:
 
-    mkdir lineage-17.x-build-gsi; cd lineage-17.x-build-gsi
+    mkdir lineage-18.x-build-gsi; cd lineage-18.x-build-gsi
 
 Initialize your LineageOS workspace:
 
-    repo init -u https://github.com/LineageOS/android.git -b lineage-17.1
+    repo init -u https://github.com/LineageOS/android.git -b lineage-18.0
 
 Clone the modified treble patches and this repo:
 
     git clone https://github.com/AndyCGYan/treble_patches -b lineage-17.1
-    git clone https://github.com/gonzalezb/treble_build_los -b lineage-17.1
+    git clone https://github.com/gonzalezb/treble_build_los -b lineage-18.0
 
 Must run this command to sync repo before running gapps.sh:
 
