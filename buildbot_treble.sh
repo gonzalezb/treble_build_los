@@ -98,7 +98,7 @@ sleep 5
 echo ""
 
 export WITHOUT_CHECK_API=true
-export WITH_SU=true
+export WITH_SU=false
 mkdir -p ~/build-output/
 
 buildVariant() {
