@@ -111,10 +111,11 @@ buildVariant() {
 
 buildVariant treble_arm64_bgN arm64-ab-gapps-nosu
 buildVariant treble_arm64_agN arm64-aonly-gapps-nosu
-buildVariant treble_a64_bgN a64-ab-gapps-nosu
-buildVariant treble_a64_agN a64-aonly-gapps-nosu
-buildVariant treble_arm_bgN arm-ab-gapps-nosu
-buildVariant treble_arm_agN arm-aonly-gapps-nosu
+# Opengapps fails to build for arm/a64 device suspending builds for now
+# buildVariant treble_a64_bgN a64-ab-gapps-nosu
+# buildVariant treble_a64_agN a64-aonly-gapps-nosu
+# buildVariant treble_arm_bgN arm-ab-gapps-nosu
+#buildVariant treble_arm_agN arm-aonly-gapps-nosu
 ls ~/build-output | grep 'lineage'
 
 END=`date +%s`
