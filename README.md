@@ -17,7 +17,7 @@ Initialize your LineageOS workspace:
 
 Clone the modified treble patches and this repo:
 
-    git clone https://github.com/AndyCGYan/treble_patches -b lineage-17.1
+    git clone https://github.com/gonzalezb/treble_patches -b lineage-18.0
     git clone https://github.com/gonzalezb/treble_build_los -b lineage-18.0
 
 Must run this command to sync repo before running gapps.sh:
