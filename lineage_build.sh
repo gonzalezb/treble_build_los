@@ -6,35 +6,6 @@ echo "Executing in 5 seconds - CTRL-C to exit"
 echo ""
 sleep 5
 
-echo "Syncing LineageOS Sources"
-echo ""
-repo sync
-echo ""
-
-echo "Downloading OpenGapps manifest"
-echo ""
-mkdir .repo/local_manifests
-wget https://raw.githubusercontent.com/gonzalezb/gsi_gapps_manifest/main/opengapps.xml -P .repo/local_manifests
-ls .repo/local_manifests
-echo ""
-
-echo "Syncing OpenGapps sources"
-echo ""
-repo sync
-echo ""
-
-echo "Downloading OpenGapps"
-echo ""
-echo "OpenGapps will take a long time to download be paitent!"
-echo ""
-for i in vendor/opengapps/sources/all vendor/opengapps/sources/arm vendor/opengapps/sources/arm64; do cd $HOME/lineage-17.x-build-gsi/$i; git lfs pull; done
-echo ""
-
-echo "Correcting directory structure"
-echo ""5
-cd $HOME/lineage-17.x-build-gsi
-echo ""
-
 START=`date +%s`
 BUILD_DATE="$(date +%Y%m%d)"
 BL=$PWD/treble_build_los
