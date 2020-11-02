@@ -5,7 +5,7 @@ To get started with building LineageOS GSI, you'll need to get familiar with [Gi
 
 First, open a new Terminal window, which defaults to your home directory.  Clone the modified treble_experimentations repo there:
 
-    git clone https://github.com/AndyCGYan/treble_experimentations
+    git clone https://github.com/gonzalezb/treble_experimentations
 
 Create a new working directory for your LineageOS build and navigate to it:
 
