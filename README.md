@@ -36,7 +36,7 @@ Run this command again:
 
 Run this command to download OpenGapps files:
 
-    repo forall -c git lfs pull
+     for i in vendor/opengapps/sources/all vendor/opengapps/sources/arm vendor/opengapps/sources/arm64; do cd $HOME/lineage-17.x-build-gsi/$i; git lfs pull; done
 
 Finally, start the build script:
 
