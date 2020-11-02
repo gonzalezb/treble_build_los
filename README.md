@@ -22,6 +22,6 @@ Clone the modified treble patches and this repo:
 
 Finally, start the build script:
 
-    bash treble_build_los/buildbot_treble.sh
+    bash treble_build_los/lineage_build.sh
 
 Be sure to update the cloned repos from time to time!
