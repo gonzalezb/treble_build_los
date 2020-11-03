@@ -38,3 +38,9 @@ echo "Correcting directory structure"
 echo ""
 cd $HOME/lineage-17.x-build-gsi
 echo ""
+
+# Sync lineage source one last time or bad things happen
+echo "Syncing source one last time!"
+echo ""
+repo sync
+echo ""
