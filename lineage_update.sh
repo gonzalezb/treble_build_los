@@ -17,7 +17,7 @@ if [[ ! -e .repo/local_manifests/opengapps.xml ]]; then
     echo "Downloading OpenGapps Manifest"
     mkdir -p .repo/local_manifests
     wget https://raw.githubusercontent.com/gonzalezb/gsi_gapps_manifest/main/opengapps.xml -P .repo/local_manifests
-    repo sync -c --force-sync --no-clone-bundle --no-tags -j$(nproc --all)
+    repo sync
     echo "Downloading OpenGapps"
     echo "Be patient this will take awhile to download if its your first time!"
     echo ""
