@@ -1,7 +1,6 @@
 #!/bin/bash
 echo ""
 echo "LineageOS 17.x Treble Buildbot with Gapps"
-echo "ATTENTION: this script syncs repo on each run"
 echo "Executing in 5 seconds - CTRL-C to exit"
 echo ""
 sleep 5
