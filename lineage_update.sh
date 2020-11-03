@@ -23,6 +23,7 @@ if [[ ! -e .repo/local_manifests/opengapps.xml ]]; then
     echo ""
     for i in vendor/opengapps/sources/all vendor/opengapps/sources/arm vendor/opengapps/sources/arm64; do cd $HOME/lineage-17.x-build-gsi/$i; git lfs pull; done
     echo ""
+    cd $HOME/lineage-17.x-build-gsi
 fi
 
 # This updates the actual Gapps files may be large
