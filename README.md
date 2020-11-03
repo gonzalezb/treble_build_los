@@ -20,8 +20,13 @@ Clone the modified treble patches and this repo:
     git clone https://github.com/gonzalezb/treble_patches
     git clone https://github.com/gonzalezb/treble_build_los -b lineage-17.1
     
+Run this command to download all Sources needed to build Lineage with Gapps
+
+    bash treble_build_los/lineage_update.sh
+    
 Finally, start the build script:
 
     bash treble_build_los/lineage_build.sh
 
 Be sure to update the cloned repos from time to time!
+Also be sure to run lineage_update.sh anytime you want to update the Lineage and OpenGapps source.
