@@ -32,6 +32,11 @@ echo ""
 for i in vendor/opengapps/sources/all vendor/opengapps/sources/arm vendor/opengapps/sources/arm64; do cd $HOME/lineage-17.x-build-gsi/$i; git lfs pull; done
 echo ""
 
+echo "Correcting directory structure"
+echo ""
+cd $HOME/lineage-17.x-build-gsi
+echo ""
+
 # This lets the user know prep is done and building will start
 echo "Building LineageOS now!"
 echo "Lineage will start building in 10 seconds!"
