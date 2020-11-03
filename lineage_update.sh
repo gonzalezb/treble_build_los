@@ -12,17 +12,22 @@ echo ""
 repo sync
 echo ""
 
-# This downloads the gapps manifest only if its not present already and also sync OpenGapps
+# This downloads the gapps manifest and also pulls it in from the repo and downloads the gapps files
 if [[ ! -e .repo/local_manifests/opengapps.xml ]]; then
     echo "Downloading OpenGapps Manifest"
     mkdir -p .repo/local_manifests
     wget https://raw.githubusercontent.com/gonzalezb/gsi_gapps_manifest/main/opengapps.xml -P .repo/local_manifests
     repo sync
+    echo "Downloading OpenGapps"
+    echo "Be patient this will take awhile to download if its your first time!"
+    echo ""
+    for i in vendor/opengapps/sources/all vendor/opengapps/sources/arm vendor/opengapps/sources/arm64; do cd $HOME/lineage-17.x-build-gsi/$i; git lfs pull; done
+    echo ""
 fi
 
-# This downloads the actual Gapps files very large
-echo "Downloading OpenGapps"
-echo "Be patient this will take awhile to download if its your first time!"
+# This updates the actual Gapps files may be large
+echo "Updating OpenGapps"
+echo "This may take a minute to update!"
 echo ""
 for i in vendor/opengapps/sources/all vendor/opengapps/sources/arm vendor/opengapps/sources/arm64; do cd $HOME/lineage-17.x-build-gsi/$i; git lfs pull; done
 echo ""
