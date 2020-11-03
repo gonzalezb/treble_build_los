@@ -1,10 +1,37 @@
 #!/bin/bash
 echo ""
-echo "LineageOS 17.x Treble Buildbot"
+echo "LineageOS 17.x Treble Buildbot with Gapps"
 echo "ATTENTION: this script syncs repo on each run"
 echo "Executing in 5 seconds - CTRL-C to exit"
 echo ""
 sleep 5
+
+echo "Syncing Lineage Sources"
+echo ""
+repo sync
+echo ""
+
+if [[ ! -e .repo/local_manifests/opengapps.xml ]]; then
+    echo "Downloading OpenGapps Manifest"
+    mkdir -p .repo/local_manifests
+    wget https://raw.githubusercontent.com/gonzalezb/gsi_gapps_manifest/main/opengapps.xml -P .repo/local_manifests
+fi
+
+echo "Syncing OpenGapps Sources"
+echo ""
+repo sync
+echo ""
+
+echo "Downloading OpenGapps"
+echo "Be patient this will take awhile to download if its your first time!"
+echo ""
+for i in vendor/opengapps/sources/all vendor/opengapps/sources/arm vendor/opengapps/sources/arm64; do cd $HOME/lineage-17.x-build-gsi/$i; git lfs pull; done
+echo ""
+
+echo "Building LineageOS now!"
+echo "Lineage will start building in 10 seconds!"
+echo ""
+sleep 10
 
 START=`date +%s`
 BUILD_DATE="$(date +%Y%m%d)"
