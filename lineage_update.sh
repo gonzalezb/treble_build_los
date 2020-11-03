@@ -12,18 +12,13 @@ echo ""
 repo sync
 echo ""
 
-# This downloads the gapps manifest only if its not present already
+# This downloads the gapps manifest only if its not present already and also sync OpenGapps
 if [[ ! -e .repo/local_manifests/opengapps.xml ]]; then
     echo "Downloading OpenGapps Manifest"
     mkdir -p .repo/local_manifests
     wget https://raw.githubusercontent.com/gonzalezb/gsi_gapps_manifest/main/opengapps.xml -P .repo/local_manifests
+    repo sync
 fi
-
-# Syncs all sources again to download gapps source
-echo "Syncing OpenGapps Sources"
-echo ""
-repo sync
-echo ""
 
 # This downloads the actual Gapps files very large
 echo "Downloading OpenGapps"
