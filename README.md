@@ -1,4 +1,9 @@
 
+## This Repo is deprecated i no longer have my Oneplus 7T i now have a Pixel 5 and have no need to unlock bootloader so this project is dead ##
+
+
+
+
 ## Building PHH-based LineageOS GSIs with Gapps ##
 
 To get started with building LineageOS GSI, you'll need to get familiar with [Git and Repo](https://source.android.com/source/using-repo.html) as well as [How to build a GSI](https://github.com/phhusson/treble_experimentations/wiki/How-to-build-a-GSI%3F).
